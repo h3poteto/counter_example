@@ -1,0 +1,11 @@
+version: '2'
+services:
+  go:
+    build: .
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: ap-northeast-1
+        awslogs-group: akira-playground/notifier
+        awslogs-stream: notifier
+
